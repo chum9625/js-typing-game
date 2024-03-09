@@ -32,6 +32,26 @@
   const remained = document.getElementById('remained');
   const inputText = document.getElementById('inputText');
 
+  let remainedTextWords = remained.textContent.split('');
+  let enteredTextWords = [];
+  console.log(remainedTextWords);
+
+  document.addEventListener('input', (e) => {
+    if(remainedTextWords[0] === e.data) {
+
+      // 入力済み文字の配列の最後に1文字追加
+      enteredTextWords.push( remainedTextWords[0] );
+      // 未入力文字の配列の先頭から1文字削除
+      remainedTextWords.shift();
+
+      console.log(enteredTextWords);
+      console.log(remainedTextWords);
+
+    } else {
+      console.log('不正解');
+    }
+  });
+
 </script>
 </body>
 </html>
