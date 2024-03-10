@@ -47,6 +47,10 @@
       console.log(enteredTextWords);
       console.log(remainedTextWords);
 
+      // 入力済みテキスト＆み入力テキストを連結して画面表示
+      entered.textContent = enteredTextWords.join('');
+      remained.textContent = remainedTextWords.join('');
+
     } else {
       console.log('不正解');
     }
